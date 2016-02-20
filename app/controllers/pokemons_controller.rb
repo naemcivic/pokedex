@@ -5,7 +5,7 @@ class PokemonsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @pokemons }
+      format.json { render json: @pokemons, :only => [:name, :image_url] }
     end
 
   end
