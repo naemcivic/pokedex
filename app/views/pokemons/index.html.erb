@@ -1,0 +1,16 @@
+<h1>Pokemon Index page</h1>
+
+<div id="pokemon-container" class="pokemon-box">
+  <% @pokemons.each do |pokemon| %>
+    <article class="pokemon">
+      <%= link_to pokemon_url(pokemon) do %>
+        <h2><%= pokemon.name %></h2>
+      <% end %>
+    </article>
+  <% end %>
+</div>
+
+<aside id="pokemon-details-container" class="pokemon-box">
+  <h2>Pokemon Details</h2>
+  <div id="pokemon-details"></div>
+</aside>

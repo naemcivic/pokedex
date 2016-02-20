@@ -1,0 +1,26 @@
+<h1>Your Pokemon of Choice</h1>
+
+<%= image_tag @pokemon.image_url %>
+<dl>
+
+  <dt>Name</dt>
+  <dd><%= @pokemon.name %></dd>
+
+  <dt>Attack</dt>
+  <dd><%= @pokemon.attack %></dd>
+
+  <dt>Defense</dt>
+  <dd><%= @pokemon.defense %></dd>
+
+  <dt>Happiness</dt>
+  <dd><%= @pokemon.happiness %></dd>
+
+  <dt>Speed</dt>
+  <dd><%= @pokemon.speed %></dd>
+
+  <dt>Species</dt>
+  <dd><%= @pokemon.species %></dd>
+
+  <dt>Growth rate</dt>
+  <dd><%= @pokemon.growth_rate %></dd>
+</dl>
