@@ -5,10 +5,15 @@ class PokemonsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @pokemons, :only => [:name, :image_url] }
+      format.json #{ render json: @pokemons, :only => [:name, :image_url] }
     end
 
   end
+
+
+
+
+
 
   def show
 
@@ -16,7 +21,7 @@ class PokemonsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @pokemon }
+      format.json #{ render json: @pokemon }
     end
 
   end
