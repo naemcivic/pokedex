@@ -1,1 +1,1 @@
-json.pokemon @pokemon, :name, :image_url
+json.pokemon @pokemon

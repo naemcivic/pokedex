@@ -1,16 +1,45 @@
-<h1>Pokemon Index page</h1>
+<h1>Pokemons</h1>
+<div id="pokemons-container">
 
-<div id="pokemon-container" class="pokemon-box">
-  <% @pokemons.each do |pokemon| %>
-    <article class="pokemon">
-      <%= link_to pokemon_url(pokemon) do %>
-        <h2><%= pokemon.name %></h2>
-      <% end %>
-    </article>
-  <% end %>
+  <script id="pokemons-template" type="text/x-handlebars-template">
+
+    <div id="pokemon-container" class="pokemon-box">
+      {{#each pokemons}}
+        <article class="pokemon">
+            <a href="/pokemons/{{id}}">
+              <h2>{{name}}</h2>
+            </a>
+        </article>
+      {{/each}}
+    </div>
+
+    <aside id="pokemon-details-container" class="pokemon-box">
+      <h2>Pokemon Details</h2>
+      <div id="pokemon-details"></div>
+    </aside>
+  </script>
 </div>
 
-<aside id="pokemon-details-container" class="pokemon-box">
-  <h2>Pokemon Details</h2>
-  <div id="pokemon-details"></div>
-</aside>
+<script id="pokemon-template" type="text/x-handlebars-template">
+  <img src="{{pokemon.image_url}}">
+  <dl>
+    <dt>Name</dt>
+    <dd>{{pokemon.name}}</dd>
+
+    <dt>Attack</dt>
+    <dd>{{pokemon.attack}}</dd>
+
+    <dt>Defense</dt>
+    <dd>{{pokemon.happiness}}</dd>
+
+    <dt>Speed</dt>
+    <dd>{{pokemon.speed}}</dd>
+
+    <dt>Species</dt>
+    <dd>{{pokemon.species}}</dd>
+
+    <dt>Growth Rate</dt>
+    <dd>{{pokemon.growth_rate}}</dd>
+  </dl>
+
+</script>
